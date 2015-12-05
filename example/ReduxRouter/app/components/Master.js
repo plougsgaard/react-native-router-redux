@@ -2,7 +2,7 @@
 
 import React, { Component, Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
-export default Master = (backgroundColor = '#F5FCFF') => class extends Component {
+const Master = (backgroundColor = '#F5FCFF') => class extends Component {
   render() {
     const { actions, assets } = this.props;
 
@@ -16,6 +16,8 @@ export default Master = (backgroundColor = '#F5FCFF') => class extends Component
     );
   }
 }
+
+export default Master
 
 var styles = StyleSheet.create({
   container: {

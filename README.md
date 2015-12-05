@@ -11,6 +11,7 @@ The easiest way to get started is to check out the example:
 ```
 cd example/ReduxRouter/
 npm install
+find node_modules -type f -name '.babelrc' | grep -v 'node_modules/react-native/packager/react-packager/.babelrc' | xargs rm
 react-native start
 ```
 
