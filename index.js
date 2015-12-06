@@ -104,7 +104,7 @@ class Router extends React.Component {
             }
 
             dispatch({
-              type: actionMap[data.type || tabChild.props.type] || 'ROUTER_PUSH',
+              type: actionMap[data.type || tabChild.props.type] || actionTypes.ROUTER_PUSH,
               payload: { name: tabName, tabBarName, data }
             });
           };
@@ -120,7 +120,7 @@ class Router extends React.Component {
           }
 
           dispatch({
-            type: actionMap[data.type || child.props.type] || 'ROUTER_PUSH',
+            type: actionMap[data.type || child.props.type] || actionTypes.ROUTER_PUSH,
             payload: { name, data },
           });
         };
