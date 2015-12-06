@@ -32,7 +32,7 @@ const findTabStack = (tabState, tabBar, tab) => {
   }
 };
 
-export default createReducer(initialState, {
+export default reducer = createReducer(initialState, {
   [actionTypes.ROUTER_CHANGE_TAB]: (state, { payload = {} }) => {
     const routeStacks = Object.assign({}, state.routeStacks);
     const currentRoutes = payload.navigator.getCurrentRoutes();

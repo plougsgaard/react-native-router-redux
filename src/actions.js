@@ -1,12 +1,12 @@
 import { createConstants } from './utils';
 
 export const actionTypes = createConstants(
-  'ROUTER_CHANGE_TAB',
-  'ROUTER_INIT',
-  'ROUTER_POP',
-  'ROUTER_PUSH',
-  'ROUTER_REPLACE',
-  'ROUTER_RESET',
+  'react-native-router-redux/ROUTER_CHANGE_TAB',
+  'react-native-router-redux/ROUTER_INIT',
+  'react-native-router-redux/ROUTER_POP',
+  'react-native-router-redux/ROUTER_PUSH',
+  'react-native-router-redux/ROUTER_REPLACE',
+  'react-native-router-redux/ROUTER_RESET',
 );
 
 const filter = data => {
