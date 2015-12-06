@@ -1,12 +1,14 @@
 import React, { Component } from 'react-native';
-import { createStore, combineReducers } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux/native';
+import createLogger from 'redux-logger';
 
 import * as reducers from '../reducers';
 import Application from './app';
 
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+const logger = createLogger();
+const createStoreWithMiddleware = applyMiddleware(logger)(createStore);
+const store = createStoreWithMiddleware(combineReducers(reducers))
 
 export default class AppContainer extends Component {
   render() {
